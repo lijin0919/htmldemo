@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function removeli() {
+        var myul = document.getElementById("ul1");//拿到ul
+
+        var myli = document.getElementById("li1");//拿到了li
+
+        myul.removeChild(myli);
+    }
+</script>
+<ul id="ul1">
+
+    <li id="li1">苹果</li>
+    <li>菠萝</li>
+    <li>蜜蜂</li>
+
+</ul>
+<button onclick="removeli()">删除</button>
+</body>
+</html>

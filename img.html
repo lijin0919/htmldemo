@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>切换图片</title>
+</head>
+<body>
+<img id="bImg" src="丑女.jpg">
+<button onclick="changeImg()">点击</button>
+<script type="text/javascript">
+    var mBool = true;
+    //3，包装
+    function changeImg() {
+
+        //1获取标签
+        var bImg1 = document.getElementById("bImg");
+
+        //4.绑定
+
+        if(mBool){
+            //2设置属性
+            bImg1.setAttribute("src","美女.png");
+            mBool = false;
+        }else {
+            bImg1.setAttribute("src","丑女.jpg");
+            mBool = true;
+        }
+    }
+
+    setInterval("changeImg()",1000);
+</script>
+</body>
+</html>

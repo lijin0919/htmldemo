@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    //cloneNode(真真假假)
+
+    function myclone() {
+        var toph1 = document.getElementById("myh1");
+        //克隆
+        var cloneh1 = toph1.cloneNode(true);
+
+        document.body.appendChild(cloneh1);
+    }
+
+</script>
+<h1 id="myh1">我是本尊</h1>
+<button onclick="myclone()">点击克隆</button>
+</body>
+</html>

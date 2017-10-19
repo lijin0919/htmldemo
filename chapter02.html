@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点</title>
+</head>
+<body>
+<button onclick="creatTag()">创建一个标签</button>
+<script type="text/javascript">
+    function creatTag() {
+        var mH1 = document.createElement("h1");
+        mH1.innerHTML = "我是被创建的h1";
+        document.body.appendChild(mH1);
+    }
+
+    function creatImg() {
+        var mImg = document.createElement("img");
+        mImg.setAttribute("src","美女.png");
+        var mDiv = document.getElementById("mydiv");
+        mDiv.appendChild(mImg);
+    }
+
+    function addul() {
+        var mUl = document.getElementById("mul");
+
+        var mLi = document.createElement("li");
+        mLi.innerHTML = "菠萝";
+        var firstli = document.getElementById("firstli");
+        mUl.insertBefore(mLi,firstli);
+    }
+
+    function copyul() {
+        var mUl = document.getElementById("secondul");
+        var clonul = mUl.cloneNode(false);
+        var clondiv = document.getElementById("clondiv");
+        clondiv.appendChild(clonul);
+    }
+</script>
+
+<div id="mydiv">
+    <button onclick="creatImg()">给这个div中添加一张图片</button>
+</div>
+
+
+<div>
+  <ul id="mul">
+      <li id="firstli">苹果</li>
+      <li>香蕉</li>
+  </ul>
+    <button onclick="addul()">添加一项</button>
+</div>
+<div id="clondiv" style="float: left">
+    <h1>第一个列表</h1>
+    <ul>
+        <li>雪诺</li>
+        <li>丹妮莉丝</li>
+    </ul>
+    <hr/>
+</div>
+<div style="float: right">
+    <h1>第二个列表</h1>
+    <ul id="secondul">
+        <li>猎狗</li>
+        <li>二丫</li>
+    </ul>
+</div>
+<div style="clear: both">
+    <button onclick="copyul()">复制列表二道列表一</button>
+</div>
+</body>
+</html>

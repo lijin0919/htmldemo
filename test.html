@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>寻找多个标签中的特定的那一个</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    //创建函数
+    function dianji() {
+        //通过标签名称取得标签集合
+        var bDiv = document.getElementsByTagName("div");//多个标签
+//如何知道多个标签的具体数量？
+        var bSecdiv = bDiv[1];
+        var nBsecdiv = bSecdiv.innerHTML;
+        alert(nBsecdiv);
+    }
+
+
+
+   //5.定义一个函数，用来和事件绑定
+   function fInputone() {
+       //1获取标签大口袋
+       var bInputs = document.getElementsByName("bInput1");
+       //2,获取标签
+       var bInputone = bInputs[0];
+       //3.内容
+       var nInputone = bInputone.value;
+       //4.显示
+       alert(nInputone);
+   }
+
+
+   //3.函数把他放进去
+    function fXuanzhong() {
+        //1\获取标签
+        var bInput2 =  document.getElementById("bInput2");
+        //2.让复选框被选中
+        alert(bInput2.checked);
+        if (bInput2.checked){
+            bInput2.checked = false;
+        }else {
+            bInput2.checked = true;
+        }
+
+        //4.与事件绑定
+    }
+</script>
+<div onclick="apple()" id="divid">你好</div>
+<div onclick="dianji()">香蕉</div>
+<div onclick="fInputone()">苹果</div>
+
+<input id="" name="bInput1"/>
+
+
+<input id="bInput2" type="checkbox"/>
+<button onclick="fXuanzhong()">点击</button>
+
+</body>
+</html>

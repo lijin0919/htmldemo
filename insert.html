@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function addinsert() {
+        //标签.insertBefore(谁，谁之前)
+        //1创建标签
+        var newli = document.createElement("li");
+        newli.innerHTML = "终结者";
+
+        //确定要添加的位置
+        //添加到ui里，第一个li之前
+        var myul = document.getElementById("ul1");//拿到ul
+
+        var myli = document.getElementById("li1");//拿到了li
+
+        myul.insertBefore(newli,myli);
+    }
+</script>
+    <ul id="ul1">
+
+        <li id="li1">苹果</li>
+        <li>菠萝</li>
+        <li>蜜蜂</li>
+
+    </ul>
+<button onclick="addinsert()">点击添加</button>
+</body>
+</html>

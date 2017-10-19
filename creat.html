@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    //1.创建函数
+    function creath1() {
+        var myH1 = document.createElement("h1");
+        myH1.innerHTML = "这是我创建的h1标签";
+        //1'考虑一下吧你新建的标签要放在哪个标签里
+        //2先找到你的目标标签
+        var firstdiv = document.getElementById("mydiv");
+        firstdiv.appendChild(myH1);
+    }
+
+
+</script>
+<div id="mydiv">
+
+</div>
+
+<button onclick="creath1()">创建一个h1标签</button>
+
+</body>
+</html>

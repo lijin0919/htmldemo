@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学会修改属性</title>
+</head>
+<body>
+<div>
+    <img id="myImg" src="丑女.jpg">
+</div>
+<div>
+    <button onclick="changeImg()">点击切换图片</button><br/>
+    <button onclick="gogogo()">滚动</button>
+</div>
+<script type="text/javascript">
+    function changeImg() {
+        var mImg = document.getElementById("myImg");
+        mImg.setAttribute("src","美女.png");
+    }
+
+    var i = 0;
+
+    function gogogo() {
+        setInterval("run()",2000);
+    }
+
+    function run() {
+        if(i%2==0){
+            var mImg = document.getElementById("myImg");
+            mImg.setAttribute("src","美女.png");
+        }else {
+            var mImg = document.getElementById("myImg");
+            mImg.setAttribute("src","丑女.jpg");
+        }
+        i++;
+    }
+
+</script>
+</body>
+</html>
