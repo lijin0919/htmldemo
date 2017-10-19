@@ -12,7 +12,10 @@
 
         var myli = document.getElementById("li1");//拿到了li
 
-        myul.removeChild(myli);
+        var newli = document.createElement("li");
+        newli.innerHTML = "我是新来的";
+//        myul.removeChild(myli);//删除指定的标签
+        myul.replaceChild(newli,myli);//用新的换掉旧的
     }
 </script>
 <ul id="ul1">
